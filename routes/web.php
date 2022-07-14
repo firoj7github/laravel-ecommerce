@@ -29,5 +29,6 @@ Route::middleware(['auth','isAdmin'])->group(function () {
  
     Route::get('category', [App\Http\Controllers\CategoryController::class, 'category'])->name('category');
     Route::get('addcategory', [App\Http\Controllers\CategoryController::class, 'addcategory'])->name('addcategory');
+    Route::post('insert', [App\Http\Controllers\CategoryController::class, 'insert'])->name('insert');
  
  });

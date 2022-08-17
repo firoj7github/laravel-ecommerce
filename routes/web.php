@@ -28,7 +28,8 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('/dashboard');
  
     Route::get('category', [App\Http\Controllers\CategoryController::class, 'category'])->name('category');
-    Route::get('addcategory', [App\Http\Controllers\CategoryController::class, 'addcategory'])->name('addcategory');
+    Route::get('product', [App\Http\Controllers\CategoryController::class, 'product'])->name('product');
+    Route::get('addproduct', [App\Http\Controllers\CategoryController::class, 'addproduct'])->name('addproduct');
     Route::post('insert', [App\Http\Controllers\CategoryController::class, 'insert'])->name('insert');
  
  });

@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
     public function product(){
-        $category = Product::all();
-        return view ('product.product', compact('category'));
+        $product = Product::all();
+        return view ('product.product', compact('product'));
     }
     public function addproduct(){
-        return view ('product.addproduct');
+        $category = Category::all();
+        return view ('product.addproduct', compact('category'));
     }
 }

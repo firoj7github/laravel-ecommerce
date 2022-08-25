@@ -36,5 +36,6 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     Route::get('product', [App\Http\Controllers\ProductController::class, 'product'])->name('product');
     Route::get('addproduct', [App\Http\Controllers\ProductController::class, 'addproduct'])->name('addproduct');
     Route::post('insert', [App\Http\Controllers\CategoryController::class, 'insert'])->name('insert');
+    Route::post('add', [App\Http\Controllers\ProductController::class, 'add'])->name('add');
  
  });

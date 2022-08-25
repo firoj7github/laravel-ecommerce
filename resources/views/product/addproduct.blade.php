@@ -5,7 +5,7 @@
         Add Product
     </div>
     <div class="card-body">
-       <form action="{{route('insert')}}" method="POST"
+       <form action="{{route('add')}}" method="POST"
        enctype="multipart/form-data"
        >
         @csrf

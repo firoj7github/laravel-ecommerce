@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('fronted.fronted');
+// });
+
+Route::get('/', [App\Http\Controllers\FrontedController::class, 'front'])->name('/');
+
+
 
 Auth::routes();
 

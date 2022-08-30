@@ -24,22 +24,30 @@
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
 
     <!-- Styles -->
-    <link href="{{ asset('admin/css/material-dashboard.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/bootstrap5.css') }}" rel="stylesheet">
+    
+    <link href="{{ asset('frontend/css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/owl.theme.default.min.css') }}" rel="stylesheet">
+   
     
 </head>
 <body>
   @include('layouts.inc.frontnavbar')
   @include('layouts.inc.slider')
+  
 
 
 
 
+    @yield('heading-1')
 
-<div class="container-fluid py-4">
-    @yield('content')
+    @yield('content-1')
 
-</div>
+    @yield('heading-2')
+    @yield('content-2')
+
+
 
 
    
@@ -50,7 +58,9 @@
   
   
 
+ <script src="{{ asset('frontend/js/jquery-3.6.1.min.js') }}" defer></script>
  <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}" defer></script>
+ <script src="{{ asset('frontend/js/owl.carousel.min.js') }}" defer></script>
  
  @yield('script')
 </body>

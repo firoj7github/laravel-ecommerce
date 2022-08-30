@@ -61,4 +61,14 @@ class ProductController extends Controller
         $data->save();
         return redirect()->back();
     }
+
+    public function viewcate($slug){
+
+        if(Category::where('slug', $slug)->first()){
+            $category=Category::where('slug', $slug)->first();
+            $products=Product::where('cate_id', $category->id)->where('status', '0')->get();
+            return view('frontend.frontendproductpage', compact ('category', 'products'));
+        }
+        
+    }
 }

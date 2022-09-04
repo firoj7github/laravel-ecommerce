@@ -33,8 +33,8 @@
     
 </head>
 <body>
-  @include('layouts.inc.frontnavbar')
-  @include('layouts.inc.slider')
+  
+  
   
 
 

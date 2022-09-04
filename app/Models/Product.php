@@ -11,6 +11,7 @@ class Product extends Model
     protected $table ='product';
     protected $fillable = [
         'cate_id',
+        'slug',
         'name',
         'description',
         'orginal_price',

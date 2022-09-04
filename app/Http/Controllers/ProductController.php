@@ -19,6 +19,7 @@ class ProductController extends Controller
     }
     public function add(Request $request){
         $name= $request->name;
+        $slug= $request->slug;
         $cate_id= $request->cate_id;
         $orginal_price= $request->orginal_price;
         $selling_price= $request->selling_price;
@@ -35,6 +36,7 @@ class ProductController extends Controller
 
         $data= new Product();
         $data->name= $name;
+        $data->slug= $slug;
         $data->cate_id= $cate_id;
         $data->orginal_price= $orginal_price;
         $data->selling_price= $selling_price;
@@ -64,11 +66,22 @@ class ProductController extends Controller
 
     public function viewcate($slug){
 
-        if(Category::where('slug', $slug)->first()){
+        if(Category::where('slug', $slug)->exists()){
             $category=Category::where('slug', $slug)->first();
-            $products=Product::where('cate_id', $category->id)->where('status', '0')->get();
+            $products=Product::where('slug', $category->slug)->where('status', '0')->limit(3)->get();
             return view('frontend.frontendproductpage', compact ('category', 'products'));
         }
         
+    }
+
+    public function productdetails($cate_slug, $prod_slug){
+        if(Category::where('slug', $cate_slug)->exists()){
+            if(Product::where('slug', $prod_slug)->exists()){
+
+            }
+            else{
+                
+            }
+        }
     }
 }

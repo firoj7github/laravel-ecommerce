@@ -1,5 +1,5 @@
 
-
+@extends('layouts.front')
 <h2>{{$category->slug}}</h2>
 
 
@@ -12,11 +12,15 @@
       @foreach($products as $pro)
         <div class="col-md-3">
           <div class="card border">
-            <img height="250px" src="{{asset('/'.$pro->image)}}" alt="">
+            <a href="{{url('category/'.$category->slug.'/'.$pro->name)}}">
+            <img height="200px" src="{{asset('/'.$pro->image)}}" alt="">
             <div class="card-body">
              
               <p>{{$pro->description}}</p>
+              <span class=float-start>{{$pro->selling_price}}</span>
+              <span class=float-end> <s> {{$pro->orginal_price}}</s></span>
             </div>
+            </a>
           </div>
         </div>
 

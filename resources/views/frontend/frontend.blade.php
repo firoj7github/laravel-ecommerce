@@ -1,6 +1,8 @@
 @extends('layouts.front')
 
 
+@extends('layouts.inc.slider')
+@extends('layouts.inc.frontnavbar')
 
 @section('title')
 EShop

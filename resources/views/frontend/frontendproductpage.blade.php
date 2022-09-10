@@ -12,7 +12,7 @@
       @foreach($products as $pro)
         <div class="col-md-3">
           <div class="card border">
-            <a href="{{url('category/'.$category->slug.'/'.$pro->name)}}">
+            <a href="{{url('category/'.$category->slug.'/'.$pro->slug)}}">
             <img height="200px" src="{{asset('/'.$pro->image)}}" alt="">
             <div class="card-body">
              

@@ -74,14 +74,13 @@ class ProductController extends Controller
         
     }
 
-    public function productdetails($cate_slug, $prod_slug){
+    public function productdetails($cate_slug, $pro_slug){
         if(Category::where('slug', $cate_slug)->exists()){
-            if(Product::where('slug', $prod_slug)->exists()){
-
+            if(Product::where('slug', $pro_slug)->exists()){
+                $products=Product::where('slug', $pro_slug)->first();
+                return view('frontend.detailsproduct', compact ('products'));
             }
-            else{
-                
-            }
+            
         }
     }
 }

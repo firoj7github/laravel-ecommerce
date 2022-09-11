@@ -61,7 +61,8 @@
  <script src="{{ asset('frontend/js/jquery-3.6.1.min.js') }}" defer></script>
  <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}" defer></script>
  <script src="{{ asset('frontend/js/owl.carousel.min.js') }}" defer></script>
+ <script src="{{ asset('frontend/js/custom.js') }}" defer></script>
  
- @yield('script')
+ @yield('scripts')
 </body>
 </html>

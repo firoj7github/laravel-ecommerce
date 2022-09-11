@@ -27,9 +27,9 @@
           
         <label for="quantity">Quantity</label>
         <div class="input-group text-center mb-3">
-           <span class="input-group-text">-</span>
-           <input type="text" name="quantity" value="1" class="form-control">
-           <span class="input-group-text">+</span>
+           <span  class="input-group-text decrement-btn">-</span>
+           <input type="text" name="quantity" value="1" class="form-control qty-input">
+           <span class="input-group-text increment-btn">+</span>
         </div>
         </div>
         <div class="col-md-10">
@@ -44,5 +44,7 @@
     </div>
   </div>
 </div>
+
+
 
 

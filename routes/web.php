@@ -29,6 +29,14 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     // Route::get('/dashboard', function () {
     //    return view('admin.index');
     // });
+
+
+    Route::middleware(['auth'])->group(function () {
+        Route::post('addtocart', [App\Http\Controllers\CartController::class, 'addCart'])->name('addtocart');
+   
+    });
+    
+    
     Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('/dashboard');
  
     Route::get('category', [App\Http\Controllers\CategoryController::class, 'category'])->name('category');

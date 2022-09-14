@@ -37,6 +37,25 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     });
     
     
+    Route::middleware(['auth'])->group(function () {
+        Route::post('updatecart', [App\Http\Controllers\CartController::class, 'updatecart'])->name('updatecart');
+   
+    });
+   
+    
+    Route::middleware(['auth'])->group(function () {
+        Route::get('checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');
+   
+    });
+   
+    
+    
+    Route::middleware(['auth'])->group(function () {
+        Route::get('cart', [App\Http\Controllers\CartController::class, 'cartitem'])->name('cart');
+   
+    });
+    
+    
     Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('/dashboard');
  
     Route::get('category', [App\Http\Controllers\CategoryController::class, 'category'])->name('category');

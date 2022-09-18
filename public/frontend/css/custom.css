@@ -1,6 +1,8 @@
 .nav-control{
     background-color: rgb(82, 42, 42);
     height: 70px;
+    width: 100%;
+   
 }
 .heading{
     margin-top: 120px;
@@ -12,7 +14,7 @@
 }
 
 .orderstyle{
-    margin-top: -70px;
+    margin-top: -408px;
     margin-right: 40px;
 }
 .checkout-from input{

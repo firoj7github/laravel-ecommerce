@@ -37,7 +37,7 @@
         </div>
         <div class="col-md-10">
           <br>
-          <button type="button" class="btn btn-success float-start me-3">Add to Wishlist</button>
+          <button type="button" class="btn btn-success addToWishlist float-start me-3">Add to Wishlist</button>
           <button type="button" class="btn btn-success addToCart float-start me-3">Add to Cart</button>
         </div>
         

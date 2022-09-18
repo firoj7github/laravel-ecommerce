@@ -1,6 +1,8 @@
 @extends('layouts.front')
 
+@extends('layouts.inc.frontnavbar')
 
+@section('content-1')
 <div class="py-3 shadow-sm bg-warning">
     <div class="container">
         <h6>
@@ -57,7 +59,7 @@
   </div>
  </div>
 </div>
-
+@endsection
 
 
 

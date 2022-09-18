@@ -47,6 +47,15 @@ Route::middleware(['auth','isAdmin'])->group(function () {
         Route::get('checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');
    
     });
+    Route::middleware(['auth'])->group(function () {
+        Route::post('placeorder', [App\Http\Controllers\CheckoutController::class, 'placeorder'])->name('placeorder');
+   
+    });
+    
+    Route::middleware(['auth'])->group(function () {
+        Route::get('myorder', [App\Http\Controllers\OrderController::class, 'myorder'])->name('myorder');
+   
+    });
    
     
     
@@ -54,6 +63,23 @@ Route::middleware(['auth','isAdmin'])->group(function () {
         Route::get('cart', [App\Http\Controllers\CartController::class, 'cartitem'])->name('cart');
    
     });
+    
+    
+    Route::middleware(['auth'])->group(function () {
+        Route::get('wishlist', [App\Http\Controllers\WishlistController::class, 'wishlist'])->name('wishlist');
+   
+    });
+    
+    Route::middleware(['auth'])->group(function () {
+        Route::post('addtowishlist', [App\Http\Controllers\WishlistController::class, 'addWishlist'])->name('addtowishlist');
+   
+    });
+
+
+
+    Route::get('loadcart', [App\Http\Controllers\CartController::class, 'cartcount'])->name('loadcart');
+    Route::get('loadwishlist', [App\Http\Controllers\WishlistController::class, 'wishlistcount'])->name('loadwishlist');
+    
     
     
     Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('/dashboard');

@@ -10,9 +10,12 @@
     <div class="row">
         <div class="col-md-6 ">
         <div class="card">
+          <div class="card-header">
+          <h4>Basic Details</h4>
+          </div>
             <div class="card-body">
-               <h4>Basic Details</h4>
-               <hr>
+               
+              
                <div class="row checkout-from">
                 <div class="col-md-6">
                   <label for="">First Name :</label>
@@ -85,9 +88,12 @@
 </div>
         <div class="col-md-4 orderstyle float-end ">
         <div class="card">
+          <div class="card-header">
+          <h4>Order Details</h4>
+          </div>
             <div class="card-body">
-            <h4>Order Details</h4>
-            <hr>
+            
+            
             <table class=table>
                 <thead>
                     <tr>

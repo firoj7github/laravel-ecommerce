@@ -102,5 +102,45 @@ $(document).ready(function () {
             country_error="";
             $('#pincode_error').html('');
         }
+
+
+   
+        if(fname_error !=''|| lname_error !='' || email_error !='' || address1_error !='' || address2_error !='' || phone_error !='' || city_error !='' || state_error !='' || country_error !='' || pincode_error!='')
+        {
+         return false;
+        }
+        else{
+
+        var data ={
+        'fname':fname,
+        'lname':lname,
+        'email':email,
+        'phone':phone,
+        'address1':address1,
+        'address2':address2,
+        'city':city,
+        'state':state,
+        'country':country,
+        'pincode':pincode
+            }
+         
+            $.ajax({
+            type: "POST",
+            url: "/proceed-to-pay",
+            data: "data",
+            dataType: "dataType",
+            success: function (response) {
+                
+            }
+         });  
+        
+        
+        
+        
+        }
+        
+    
+    
     });
+    
 });

@@ -4,6 +4,7 @@
 @extends('layouts.inc.slider')
 @extends('layouts.inc.frontnavbar')
 
+
 @section('title')
 EShop
 @endsection
@@ -73,6 +74,9 @@ EShop
         </div>
 
         @endforeach
+
+
+      
     
        </div>
         
@@ -84,4 +88,8 @@ EShop
 
   </div>
 @endsection
+
+
+
+
 

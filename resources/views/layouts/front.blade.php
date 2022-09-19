@@ -30,8 +30,35 @@
     
     <link href="{{ asset('frontend/css/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/owl.theme.default.min.css') }}" rel="stylesheet">
+
+
+    
+    
+    
+    <!-- another style for frontend -->
+
+<!-- Bootstrap -->
+<link type="text/css" rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"/>
+
+<!-- Slick -->
+<link type="text/css" rel="stylesheet" href="{{asset('css/slick.css')}}"/>
+<link type="text/css" rel="stylesheet" href="{{asset('css/slick-theme.css')}}"/>
+
+<!-- nouislider -->
+<link type="text/css" rel="stylesheet" href="{{asset('css/nouislider.min.css')}}"/>
+
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+
+<!-- Custom stlylesheet -->
+<link type="text/css" rel="stylesheet" href="{{asset('css/style.css')}}"/>
    
     
+
+
+
+
+
 </head>
 <body>
   
@@ -47,6 +74,9 @@
 
     @yield('heading-2')
     @yield('content-2')
+    
+    @extends('layouts.inc.frontfooter')
+   
 
 
 
@@ -64,6 +94,28 @@
  <script src="{{ asset('frontend/js/owl.carousel.min.js') }}" defer></script>
  <script src="{{ asset('frontend/js/custom.js') }}" defer></script>
  <script src="{{ asset('frontend/js/checkout.js') }}" defer></script>
+
+
+ 
+ 
+ 
+ 
+ <!-- another script for frontend -->
+ 
+ <script src="{{asset('js/jquery.min.js')}}"></script>
+		<script src="{{asset('js/bootstrap.min.js')}}"></script>
+		<script src="{{asset('js/slick.min.js')}}"></script>
+		<script src="{{asset('js/nouislider.min.js')}}"></script>
+		<script src="{{asset('js/jquery.zoom.min.js')}}"></script>
+		<script src="{{asset('js/main.js')}}"></script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  @yield('scripts')
 </body>

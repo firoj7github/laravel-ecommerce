@@ -1,18 +1,20 @@
 
 @extends('layouts.front')
-<h2>{{$category->slug}}</h2>
+@extends('layouts.inc.frontnavbar')
 
 
 
-<div class="py-5 pt-3">
+@section('content-2')
+<h2 class="mt-5 ms-5">{{$category->slug}}</h2>
+<div class="py-5 pt-3 mt-5 footer-control">
     <div class="container">
       <div class="row ">
      
      
       @foreach($products as $pro)
         <div class="col-md-3">
-          <div class="card border">
-            <a href="{{url('category/'.$category->slug.'/'.$pro->slug)}}">
+          <div class="card  shadow bg-gray">
+            <a href="{{url('category/'.$category->slug.'/'.$pro->name)}}">
             <img height="200px" src="{{asset('/'.$pro->image)}}" alt="">
             <div class="card-body">
              
@@ -35,3 +37,4 @@
     </div>
 
   </div>
+  @endsection

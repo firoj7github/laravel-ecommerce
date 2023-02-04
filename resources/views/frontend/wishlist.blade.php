@@ -12,8 +12,8 @@
     </div>
 </div>
 
-<div class="container my-5">
-    <div class="card">
+<div class="container my-5 ">
+    <div class="card footer-fixed border-success">
         <div class="card-body">
             @if($wishlist->count()>0)
             @foreach($wishlist as $item)
@@ -23,11 +23,11 @@
         <img src="{{asset('/'.$item->product->image)}}" height="70px" alt="image">
     </div>
     
-    <div class="col-md-2 mt-3">
+    <div class="col-md-2 mt-4">
         <h4> Rs{{$item->product->selling_price}}</h4>
     </div>
 
-    <div class="col-md-3 mt-3">
+    <div class="col-md-3 mt-4">
     @if($item->product->quantity>0)
       <label class="badge bg-success">In Stock</label>
       @else

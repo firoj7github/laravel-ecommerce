@@ -14,7 +14,7 @@
 
 
 
-<div class="container mt-5">
+<div class="container mt-5 footer-maintain">
   <div class="card shadow product_data">
     <div class="card-body">
         @php

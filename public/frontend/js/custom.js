@@ -24,7 +24,10 @@ $(document).ready(function () {
       },
       
       success: function (response) {
-           alert(response.status);
+        if(res.status=='success'){
+          alert(response.status);
+          loadcart();
+        }
       }
     });
     

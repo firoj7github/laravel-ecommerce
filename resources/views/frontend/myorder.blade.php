@@ -6,9 +6,9 @@
 @section('content-1')
 
 <div class="container">
-    <div class="row mt-5">
+    <div class="row mt-5 footer-maintain">
         <div class="col-md-12">
-        <div class="card">
+        <div class="card footer-maintain">
            <div class="card-header">
             <h4>My Order</h4>
            </div>

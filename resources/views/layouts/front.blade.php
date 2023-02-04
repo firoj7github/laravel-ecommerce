@@ -37,6 +37,8 @@
     
     <!-- another style for frontend -->
 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
 <!-- Bootstrap -->
 <link type="text/css" rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"/>
 
@@ -74,6 +76,8 @@
 
     @yield('heading-2')
     @yield('content-2')
+    @yield('content-3')
+    @yield('content-4')
     
     @extends('layouts.inc.frontfooter')
    

@@ -3,13 +3,20 @@
 			<div id="top-header">
 				<div class="container">
 					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
+						<li><a href="#"><i class="fa fa-phone"></i> 01781-129819</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> fkfiroj02@gmail.com</a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i> Ns Road Kushtia</a></li>
 					</ul>
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-						<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+					<li class="nav-item">
+                       <a class="nav-link active" aria-current="page" href="/">Home</a>
+                     </li>
+					 <li class="nav-item">
+                        <a class="nav-link" href="{{url('myorder')}}">My Orders</a>
+                     </li>
+                     <li class="nav-item">
+                     <a class="nav-link" href="/login" >Login</a>
+                     </li>
 					</ul>
 				</div>
 			</div>
@@ -24,9 +31,9 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
-									<img src="./img/logo.png" alt="">
-								</a>
+
+							<h2 class="logo mt-4 text-white">Banko.</h2>
+								
 							</div>
 						</div>
 						<!-- /LOGO -->
@@ -35,11 +42,13 @@
 						<div class="col-md-6">
 							<div class="header-search">
 								<form>
+									
 									<select class="input-select">
-										<option value="0">All Categories</option>
-										<option value="1">Category 01</option>
-										<option value="1">Category 02</option>
+										
+										<option >category</option>
+										
 									</select>
+									
 									<input class="input" placeholder="Search here">
 									<button class="search-btn">Search</button>
 								</form>
@@ -68,36 +77,11 @@
 										<div class="qty cartcount">0</div>
 									</a>
 									<div class="cart-dropdown">
-										<div class="cart-list">
-											<div class="product-widget">
-												<div class="product-img">
-													<img src="./img/product01.png" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">product name goes here</a></h3>
-													<h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
-												</div>
-												<button class="delete"><i class="fa fa-close"></i></button>
-											</div>
-
-											<div class="product-widget">
-												<div class="product-img">
-													<img src="./img/product02.png" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">product name goes here</a></h3>
-													<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
-												</div>
-												<button class="delete"><i class="fa fa-close"></i></button>
-											</div>
-										</div>
-										<div class="cart-summary">
-											<small>3 Item(s) selected</small>
-											<h5>SUBTOTAL: $2940.00</h5>
-										</div>
-										<div class="cart-btns">
-											<a href="#">View Cart</a>
-											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+										
+										
+					                        <div class="cart-btns">
+											<a href="{{url('cart')}}">View Cart</a>
+											<a href="{{url('checkout')}}">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -133,9 +117,9 @@
 
 
 
-<nav class="navbar navbar-expand-lg nav-control ">
+<!-- <nav class="navbar navbar-expand-lg nav-control ">
   <div class="container-fluid ">
-    <a class="navbar-brand" href="#">Navbar</a>
+  
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -164,4 +148,4 @@
       
     </div>
   </div>
-</nav> 
+</nav>  -->

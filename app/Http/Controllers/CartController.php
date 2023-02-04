@@ -39,6 +39,8 @@ class CartController extends Controller
                     $cartItem->user_id = Auth::id();
                     $cartItem->prod_qty = $product_qty;
                     $cartItem->save();
+                    
+
                     return response()->json(['status'=> $prod_check->name."Add to cart"]);
                 }
             }
@@ -62,6 +64,7 @@ class CartController extends Controller
                 $cart = Cart::where('prod_id',$product_id)->where('user_id',Auth::id())->first();
                 $cart->prod_qty=$product_qty;
                 $cart->update();
+                
                 return response()->json(['status'=>"Update quantity to cart"]);
             }
 

@@ -23,25 +23,24 @@ Route::get('/', [App\Http\Controllers\FrontedController::class, 'front'])->name(
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::middleware(['auth','isAdmin'])->group(function () {
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('/home');
+Route::middleware(['auth'])->group(function () {
 
-    // Route::get('/dashboard', function () {
-    //    return view('admin.index');
-    // });
+    Route::get('/dashboard', function () {
+       return view('admin.index');
+    });
 
 
-    Route::middleware(['auth'])->group(function () {
+    
         Route::post('addtocart', [App\Http\Controllers\CartController::class, 'addCart'])->name('addtocart');
    
-    });
+   
     
     
-    Route::middleware(['auth'])->group(function () {
+   
         Route::post('updatecart', [App\Http\Controllers\CartController::class, 'updatecart'])->name('updatecart');
    
-    });
-   
+ 
     
     Route::middleware(['auth'])->group(function () {
         Route::get('checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');
@@ -59,10 +58,10 @@ Route::middleware(['auth','isAdmin'])->group(function () {
    
     
     
-    Route::middleware(['auth'])->group(function () {
+   
         Route::get('cart', [App\Http\Controllers\CartController::class, 'cartitem'])->name('cart');
    
-    });
+    
     
     
     Route::middleware(['auth'])->group(function () {
@@ -91,6 +90,6 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     Route::post('insert', [App\Http\Controllers\CategoryController::class, 'insert'])->name('insert');
     Route::post('add', [App\Http\Controllers\ProductController::class, 'add'])->name('add');
     Route::get('category/{slug}', [App\Http\Controllers\ProductController::class, 'viewcate'])->name('category/{slug}');
-    Route::get('category/{cate_slug}/{pro_slug}', [App\Http\Controllers\ProductController::class, 'productdetails'])->name('category/{cate_slug}/{pro_slug}');
+    Route::get('category/{cate_slug}/{pro_name}', [App\Http\Controllers\ProductController::class, 'productdetails'])->name('category/{cate_slug}/{pro_name}');
  
  });

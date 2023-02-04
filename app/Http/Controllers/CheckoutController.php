@@ -29,6 +29,7 @@ class CheckoutController extends Controller
           $order->pincode= $request->input('pincode');
           $order->tracking_no= 'firoj'.rand(1111,9999);
           $order->save();
+          return response()->json(['status'=> $prod_check->name."Successfully paid by paypal"]);
 
           $cartitems= Cart::where('user_id', Auth::id())->get();
 
